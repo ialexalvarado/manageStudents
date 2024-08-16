@@ -22,7 +22,7 @@ import com.gestion.alumnos.gestionalumnos.exception.StudentNotFoundException;
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(StudentNotFoundException.class)
-    public ResponseEntity<String> handleStudentNotFound(StudentNotFoundException ex){
+    public ResponseEntity<String> handleStudentNotFoundException(StudentNotFoundException ex){
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
     }
 
